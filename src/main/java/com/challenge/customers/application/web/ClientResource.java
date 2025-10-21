@@ -1,4 +1,3 @@
-// ClientResource.java
 package com.challenge.customers.application.web;
 
 import com.challenge.customers.application.port.*;
