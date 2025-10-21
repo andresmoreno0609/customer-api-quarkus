@@ -1,4 +1,3 @@
-// infra/persistence/ClientPanacheRepository.java
 package com.challenge.customers.infra.persistence;
 
 import com.challenge.customers.domain.model.Client;

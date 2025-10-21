@@ -1,4 +1,3 @@
-// infra/repository/ClientRepositoryImpl.java
 package com.challenge.customers.infra.repository;
 
 import com.challenge.customers.domain.model.Client;

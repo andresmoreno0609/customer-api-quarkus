@@ -1,9 +1,11 @@
 package com.challenge.customers.domain.strategy;
 
+import io.quarkus.test.junit.QuarkusTest;
 import jakarta.ws.rs.WebApplicationException;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+@QuarkusTest
 class ChileAccountValidationTest {
 
     @Test

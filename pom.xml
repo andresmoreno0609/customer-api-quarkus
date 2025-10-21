@@ -21,43 +21,36 @@
     </properties>
 
     <dependencies>
-        <!-- REST + JSON -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-resteasy-reactive-jackson</artifactId>
         </dependency>
 
-        <!-- CDI / Inyección de dependencias -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-arc</artifactId>
         </dependency>
 
-        <!-- ORM + Panache -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-hibernate-orm-panache</artifactId>
         </dependency>
 
-        <!-- Base de datos H2 -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-jdbc-h2</artifactId>
         </dependency>
 
-        <!-- Validación (Bean Validation / Jakarta) -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-hibernate-validator</artifactId>
         </dependency>
 
-        <!-- OpenAPI / Swagger -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-smallrye-openapi</artifactId>
         </dependency>
 
-        <!-- Testing -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -75,7 +68,6 @@
             <artifactId>quarkus-smallrye-health</artifactId>
         </dependency>
 
-        <!-- Lombok (solo en compilación) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
