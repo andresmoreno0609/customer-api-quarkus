@@ -23,21 +23,82 @@ El objetivo es exponer un conjunto de endpoints REST que permitan gestionar clie
 
 ---
 
-## 🧱 Arquitectura
+## 📂 Estructura de Paquetes
 
-El proyecto sigue el enfoque de **Arquitectura Hexagonal (Ports & Adapters)**:
-
+```
 src/main/java/com/challenge/customers
 │
 ├── application
-│   ├── port/
-│   ├── service/
-│   └── web/
+│   ├── port/                 # Interfaces de entrada (Use Cases)
+│   ├── service/              # Implementaciones de casos de uso
+│   └── web/                  # Controladores REST (ClientResource)
 │
 ├── domain
-│   ├── model/
-│   ├── repository/
-│   └── strategy/
+│   ├── model/                # Entidades JPA (Client, Catalogs)
+│   ├── repository/           # Interfaces Panache
+│   └── strategy/             # Implementación del patrón Strategy
 │
 └── infrastructure
-└── persistence/
+    └── persistence/          # Adaptadores a base de datos (Panache)
+```
+
+---
+
+## 🚀 Ejecución del proyecto
+
+### ▶️ Ejecución local
+
+```bash
+./mvnw clean quarkus:dev
+```
+
+El servicio se levantará en:
+
+```
+http://localhost:8080
+```
+
+Base de datos H2 embebida:
+```
+jdbc:h2:mem:customers;DB_CLOSE_DELAY=-1
+```
+
+---
+
+## 📘 Endpoints principales
+
+| Método | Endpoint | Descripción |
+|---------|-----------|-------------|
+| `GET` | `/clients` | Lista todos los clientes |
+| `GET` | `/clients/{id}` | Obtiene un cliente por su ID |
+| `POST` | `/clients` | Crea un nuevo cliente |
+| `PATCH` | `/clients/{id}` | Actualiza los datos de un cliente |
+| `POST` | `/clients/{id}/activate` | Activa el cliente |
+| `POST` | `/clients/{id}/inactivate` | Inactiva el cliente |
+| `DELETE` | `/clients/{id}` | Elimina lógicamente un cliente |
+
+---
+
+## 🧩 Swagger y OpenAPI
+
+### 📄 Documentación OpenAPI
+```
+http://localhost:8080/q/openapi
+```
+
+### 🧭 Swagger UI
+```
+http://localhost:8080/q/swagger-ui/
+```
+
+Permite probar los endpoints directamente desde el navegador.
+
+---
+
+## 🧑‍💻 Autor
+
+**Andrés Raúl Moreno López**  
+Desarrollador Backend | Java / Quarkus / Spring Boot  
+📍 Colombia  
+📧 [andresmoreno1991609@gmail.com]
+
